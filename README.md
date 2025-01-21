@@ -81,3 +81,32 @@ The behavior for each channel is defined in a JSON configuration:
    - Logs an error and skips processing for that channel.
 
 ---
+
+## Code Design
+The code is designed to:
+1. Fetch data for multiple channels in parallel using `Promise.all`.
+2. Use a helper function to fetch videos based on parameters (e.g., event type, max results).
+3. Match video titles using a case-insensitive regex.
+4. Log errors gracefully and continue processing other channels.
+
+---
+
+## Applications
+1. **Live Event Tracking:**
+   - Useful for monitoring specific live events or streams from content creators.
+2. **Content Aggregators:**
+   - Build dashboards that display live or recent streams for multiple channels.
+3. **Core for one of my upcoming projects**
+
+
+---
+
+## Final Outcome
+The system efficiently retrieves the most relevant streams for a set of channels, handling edge cases and fallback scenarios. It provides a scalable and customizable solution for fetching YouTube streams based on channel and title criteria.
+
+## What i learnned:
+- How to use the YouTube Data API to fetch live and completed videos.
+- How to use regex to match video titles.
+- How to handle edge cases and fallback scenarios.
+- How to use async/await for asynchronous operations.
+- How to use Promise.all to fetch data for multiple channels in parallel.
